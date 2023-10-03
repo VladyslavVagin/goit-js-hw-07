@@ -29,10 +29,10 @@ function onClickImageShow(evt) {
     `<img src="${evt.target.dataset.source}">`,
     {
       onShow: (instance) => {
-        document.addEventListener("keydown", onPressEsc);
+        window.addEventListener("keydown", onPressEsc);
       },
       onClose: (instance) => {
-        document.removeEventListener("keydown", onPressEsc);
+        window.removeEventListener("keydown", onPressEsc);
       },
     }
   );
